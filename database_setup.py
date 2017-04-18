@@ -9,8 +9,7 @@ Base = declarative_base()
 
 
 class FanShop(Base):
-     __tablename__ = 'Fan_shop'
-
+    __tablename__ = 'Fan_shop'
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
 
@@ -30,7 +29,7 @@ class FanItem(Base):
     description = Column(String(250))
     price = Column(String(8))
     course = Column(String(250))
-    restaurant_id = Column(Integer, ForeignKey('Fanshop.id'))
+    restaurant_id = Column(Integer, ForeignKey('Fan_shop.id'))
     restaurant = relationship(FanShop)
 
     @property
