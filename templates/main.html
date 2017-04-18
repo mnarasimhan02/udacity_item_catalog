@@ -2,18 +2,20 @@
 {% block content %} 
 <div class="neighborhood-guides">
         <div class="container">
-            <h2>Toy Shop Guides</h2>
+            <h2>Fan Shop Guides</h2>
             <p>Not sure which shop to visit?</p>
-      <button type="button"><a href = "\new\">New Toy Shop</a></button>
+      {% if login_session.get('credentials') is not none %}
+      <button type="button"><a href = "\new\">New Fan Shop</a></button>
+      {% endif %}
     </div>
     <div class="learn-more">
     <div class="container">
     <div class="row">
-      {% for shop in toyshops%}
+      {% for shop in fanshops%}
         <div class="col-md-4">
       <h3>{{shop.name}}</h3>
       <p>{{shop.description}}.</p>
-      <p><a href="#">See the toys sold in this shop.</a></p>
+      <p><a href="/index/{{shop.id}}">See the fan gears sold in this shop.</a></p>
         </div>
      {% endfor %}
       </div>
