@@ -200,7 +200,7 @@ def newShop():
         
         newShop = fanShop(name=request.form['name'],description = request.form['description'], user_id = login_session.get('user_id') )
         session.add(newShop)
-        flash('Fans Sports Gear shop %s Successfully Created' % newShop.name)
+        flash('Fans sports gear shop %s successfully Created' % newShop.name)
         session.commit()
         return redirect(url_for('showShops'))
     else:

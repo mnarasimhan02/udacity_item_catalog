@@ -22,12 +22,12 @@
     {% if login_session.get('credentials') is not none %}
     <div class="col-md-11 padding-none">
       <a href="{{url_for('editfanshop', shop_ID = fanshop.id )}}">
-        <button class="btn btn-default" id="edit">Edit fan shop</button>
+        <button class="btn btn-default" id="edit">Edit sport gear shop</button>
       </a>
       <a href="{{url_for('addNewfan', shop_ID = fanshop.id )}}">
-        <button class="btn btn-default" id="new-fan">Add new fan gear</button>
+        <button class="btn btn-default" id="new-fan">Add new sport gear</button>
       </a>
-        <button class="btn btn-default delete" id="delete" onclick="myFunction('Are you sure to delete this fan shop?','{{url_for('deletefanshop', shop_ID = fanshop.id )}}')" >Delete fan shop</button>
+        <button class="btn btn-default delete" id="delete" onclick="myFunction('Are you sure to delete this fan shop?','{{url_for('deletefanshop', shop_ID = fanshop.id )}}')" >Delete sport gear shop</button>
     </div>
     {% endif %}
     <div class="col-md-7"></div>
