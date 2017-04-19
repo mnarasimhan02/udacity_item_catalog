@@ -40,19 +40,19 @@ You can use url likes `localhost:5000/index/<string:shop_ID>/<string:Fan_ID>/JSO
 
 ##You will see
 The main page looks like:
-![1](https://lh5.googleusercontent.com/-qkx6LQ6O9wU/VXRf6QC_P1I/AAAAAAAAAG0/tUHsYB8_b4k/w1212-h682/1.png)
+![1](/screenshots/ScreenShot_1.png?raw=true)
 
 You can use your google account to login:
-![2](https://lh4.googleusercontent.com/-d3k5mYac8II/VXRf5Rq-5JI/AAAAAAAAAGw/9IwK94wdilU/w1212-h682-no/2.png)
+![2](/screenshots/ScreenShot_2.png?raw=true)
 
 You can create your own shop:
-![4](https://lh6.googleusercontent.com/-_vakljjtW2k/VXRf6aDsoeI/AAAAAAAAAHA/YhKeW63N0Lk/w1212-h682-no/3.png)
+![3](/screenshots/ScreenShot_3.png?raw=true)
 
 You can view the shop:
-![6](https://lh4.googleusercontent.com/-CtQJuzp_JFM/VXRgB3Um12I/AAAAAAAAAHM/ZF8KbHyBzMw/w1212-h682-no/4.png)
+![4](/screenshots/ScreenShot_4.png?raw=true)
 
-You can add new Fan to your shop:
-![7](https://lh6.googleusercontent.com/-iTptXE7dyhk/VXRgHfLVLuI/AAAAAAAAAHY/Vbw9Fa3yCL8/w1212-h682-no/5.png)
+You can add new sport gear to your shop:
+![5](/screenshots/ScreenShot_5.png?raw=true)
 
 You can use JSON APIs like:
-![9](https://lh6.googleusercontent.com/-iSpM6UUs1NE/VXRgCL2RRZI/AAAAAAAAAHQ/m1jXVYBpSnY/w1212-h682-no/6.png)
+![6](/screenshots/ScreenShot_6.png?raw=true)
