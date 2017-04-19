@@ -192,6 +192,13 @@ def gdisconnect():
 # Create a new shop
 @app.route('/new/', methods=['GET', 'POST'])
 def newShop():
+    """
+        Creates a new shop in the database
+        
+        Returns:
+        on POST : Redirect to main page after shop is created
+        Login page  when user is not signed in 
+    """
     if not checkLogin(login_session):
         flash('You must login to manage a sports gear shop.')
         return redirect(url_for('showShops'))
@@ -209,6 +216,13 @@ def newShop():
 # add a new gear to shop
 @app.route('/index/<string:shop_ID>/add', methods=['GET', 'POST'])
 def addNewfan(shop_ID):
+    """
+        Creates a new Fan gear for the shop in the database
+        
+        Returns:
+        on POST : Redirect to Sport page to list all 
+        sport gear for the shop
+    """
     if not checkLogin(login_session):
         flash('You must login to create a sports gear shop')
         return redirect(url_for('showShops'))
@@ -228,6 +242,13 @@ def addNewfan(shop_ID):
 # delete a sports gear from shop
 @app.route('/index/<string:shop_ID>/<string:fan_ID>/delete')
 def deletefan(shop_ID,fan_ID):
+    """
+        Deletes a fan gear for the shop in the database
+        
+        Returns:
+        on POST : Redirect to Sport page to list all 
+        sport gear for the shop after deletion
+    """
     if not checkLogin(login_session):
         flash('You must login to manage a fan shop.')
         return redirect(url_for('showItems',shop_ID = shop_ID))
@@ -244,6 +265,13 @@ def deletefan(shop_ID,fan_ID):
 # edit a gear
 @app.route('/index/<string:shop_ID>/<string:fan_ID>/edit', methods=['GET', 'POST'])
 def editfan(shop_ID,fan_ID):
+    """
+        Enables option to edit sport gear for a shop in the database
+        
+        Returns:
+        on POST : Redirect to Sport page to list all 
+        sport gear for the shop after updates
+    """
     if not checkLogin(login_session):
         flash('You must login to manage a sports gear shop')
         return redirect(url_for('showItems',shop_ID = shop_ID))
@@ -264,6 +292,13 @@ def editfan(shop_ID,fan_ID):
 # edit a gear shop
 @app.route('/index/<string:shop_ID>/edit', methods=['GET', 'POST'])
 def editfanshop(shop_ID):
+    """
+        Enables option to edit sport shop in the database
+        
+        Returns:
+        on POST : Redirect to home page to list all 
+        sport shop
+    """
     if not checkLogin(login_session):
         flash('You must login to manage a sports gear shop.')
         return redirect(url_for('showItems',shop_ID = shop_ID))

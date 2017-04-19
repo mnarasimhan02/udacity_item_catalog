@@ -2,7 +2,7 @@ import os
 import sys
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 from sqlalchemy import create_engine
 
 Base = declarative_base()
@@ -51,7 +51,7 @@ class fanItem(Base):
     description = Column(String(250))
     price = Column(String(8))
     shop_id = Column(Integer, ForeignKey('fan_shop.id'))
-    shop = relationship(fanShop)
+    shop = relationship(fanShop, backref=backref('fan_item', cascade='all, delete'))
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
 
