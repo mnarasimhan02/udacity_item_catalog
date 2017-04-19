@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
-
   </head>
-
   <body>
   <div class = 'flash'>
     {% with messages = get_flashed_messages() %}
       {% if messages %}
-
           <ul>
           {% for message in messages %}
               <li> <strong> {{ message }} </strong> </li>
@@ -20,13 +16,12 @@
           </ul>
           {% endif %}
     {% endwith %}
-
   </div>
     <div class="jumbotron">
       <div class="container">
     <div class="pull-left">
-          <h1>Find a shop to visit.</h1>
-          <p>Thousands of fans for your choosing.</p>
+          <h1>Find a fan gear shop to visit.</h1>
+          <p>Thousands of fan gears for your choosing.</p>
       <a href = "/">Home Page</a>
         </div>
     {% if login_session.get('credentials') is none %}
@@ -39,7 +34,6 @@
       <p >Welcome, {{login_session['username']}}&nbsp&nbsp<img src= ' {{login_session['picture']}} '  style = "width: 30px; height: 30px;border-radius: 5px;-webkit-border-radius: 15px;-moz-border-radius: 5px;"> </p> 
     <ul>
       <li><a href="/gdisconnect">Log Out</a></li>
-      
     </ul>
     </div>    
     {% endif %}
